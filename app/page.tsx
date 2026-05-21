@@ -1,10 +1,12 @@
 import Nav from "@/components/Nav";
 import HeroSection from "@/components/sections/HeroSection";
-import AboutSection from "@/components/sections/AboutSection";
-import ValuesSection from "@/components/sections/ValuesSection";
+import FrameworkSection from "@/components/sections/FrameworkSection";
+import CompaniesSection from "@/components/sections/CompaniesSection";
+import ImpactNumbersSection from "@/components/sections/ImpactNumbersSection";
+import AboutAndChatSection from "@/components/sections/AboutAndChatSection";
+import WhatIBringSection from "@/components/sections/WhatIBringSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
-import AskPoojaSection from "@/components/sections/AskPoojaSection";
 import TheHumanSection from "@/components/sections/TheHumanSection";
 import ConnectSection from "@/components/sections/ConnectSection";
 
@@ -14,11 +16,13 @@ export default function Home() {
       <Nav />
       <main>
         <HeroSection />
-        <AboutSection />
-        <ValuesSection />
+        <FrameworkSection />
+        <CompaniesSection />
+        <ImpactNumbersSection />
+        <AboutAndChatSection />
+        <WhatIBringSection />
         <ExperienceSection />
         <ProjectsSection />
-        <AskPoojaSection />
         <TheHumanSection />
         <ConnectSection />
       </main>

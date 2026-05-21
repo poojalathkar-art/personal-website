@@ -17,11 +17,11 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   title: "Pooja Lathkar — People Leader",
   description:
-    "Strong organisations are built through thoughtfully designed environments. Pooja Lathkar is an AI-native people leader with 15+ years across education, social impact, fintech, and deep-tech.",
+    "What looks like a people problem is almost always a design problem. Pooja Lathkar is an AI-native people leader with 15+ years across education, social impact, fintech, and deep-tech.",
   openGraph: {
     title: "Pooja Lathkar — People Leader",
     description:
-      "Strong organisations are built through thoughtfully designed environments.",
+      "What looks like a people problem is almost always a design problem.",
     type: "website",
   },
 };

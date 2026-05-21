@@ -1,23 +1,55 @@
+"use client";
+
 import ScrollFadeIn from "@/components/ScrollFadeIn";
 
 const values = [
   {
     title: "Fix systems, not symptoms.",
-    body: "When something isn't working, I look upstream before I intervene downstream. At Groww, when NPS wasn't moving, I didn't push harder on training — I diagnosed that feedback wasn't reaching agents at all, and fixed the pipeline. The symptom was performance. The system was broken feedback loops.",
+    tagline: "Look upstream before you intervene downstream.",
+    story:
+      "I once inherited a team getting 25,000 customer interactions a day, but NPS wasn't moving. The instinct was to push harder on training. Instead I dug into why — and found that most people were getting no feedback at all. Fixed the feedback pipeline. NPS followed.",
   },
   {
     title: "Integrity is non-negotiable.",
-    body: "Even when timing is inconvenient or the cost is high. In my first month at Digantara — a defence startup working with governments across the world — I discovered two employees had breached confidentiality protocols. I terminated both immediately. Early days, no relationships yet. Still the only call.",
+    tagline: "Even when the timing is inconvenient.",
+    story:
+      "In my first month at a new role, I discovered two employees had breached confidentiality protocols. No established relationships, early days, high personal cost. I terminated both immediately. There was no version of that decision where I didn't.",
   },
   {
     title: "Empathy + courage in equal measure.",
-    body: "Empathy without courage is tolerance. Courage without empathy is cruelty. Good people leadership lives in the tension between the two — staying warm enough to earn trust and honest enough to tell the truth. Neither alone produces strong teams.",
+    tagline: "Neither alone produces good leadership.",
+    story:
+      "Too much empathy and you're tolerating poor performance. Too much courage and you become someone people fear. Good leadership — and good HR — lives in the tension between the two. You have to be warm enough to earn trust and honest enough to tell the truth.",
   },
 ];
 
+function FlipCard({ value }: { value: (typeof values)[0] }) {
+  return (
+    <div className="group h-64 [perspective:1000px]">
+      <div className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+        {/* Front */}
+        <div className="absolute inset-0 bg-[#F0EBE3] rounded-2xl p-8 flex flex-col justify-between [backface-visibility:hidden]">
+          <p className="text-xs uppercase tracking-widest text-[#C4714A]">
+            Hover to see the story
+          </p>
+          <div>
+            <h3 className="font-serif text-xl text-[#1C1917] mb-3">{value.title}</h3>
+            <p className="text-sm text-[#78716C]">{value.tagline}</p>
+          </div>
+        </div>
+
+        {/* Back */}
+        <div className="absolute inset-0 bg-[#C4714A] rounded-2xl p-8 flex items-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          <p className="text-sm text-white leading-relaxed">{value.story}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ValuesSection() {
   return (
-    <section id="values" className="py-28 px-6">
+    <section id="values" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <ScrollFadeIn>
           <p className="text-sm uppercase tracking-widest text-[#C4714A] mb-4">
@@ -32,27 +64,18 @@ export default function ValuesSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
           {values.map((v, i) => (
             <ScrollFadeIn key={v.title} delay={i * 100}>
-              <div className="bg-[#F0EBE3] rounded-2xl p-8 h-full">
-                <h3 className="font-serif text-xl text-[#1C1917] mb-4">
-                  {v.title}
-                </h3>
-                <p className="text-[#78716C] leading-relaxed text-sm">
-                  {v.body}
-                </p>
-              </div>
+              <FlipCard value={v} />
             </ScrollFadeIn>
           ))}
         </div>
 
-        {/* Core belief */}
-        <ScrollFadeIn delay={350}>
-          <div className="border-l-4 border-[#C4714A] pl-8 py-2 max-w-3xl">
-            <p className="text-sm uppercase tracking-widest text-[#C4714A] mb-3">
+        <ScrollFadeIn delay={300}>
+          <div className="border-l-4 border-[#C4714A] pl-8 py-1 max-w-2xl">
+            <p className="text-xs uppercase tracking-widest text-[#C4714A] mb-3">
               Core belief
             </p>
-            <p className="font-serif text-2xl md:text-3xl text-[#1C1917] leading-snug">
-              People are intrinsically motivated by purpose. Compensation and
-              benefits are hygiene — not fuel.
+            <p className="font-serif text-2xl text-[#1C1917] leading-snug">
+              People are intrinsically motivated by purpose. Compensation is hygiene — not fuel.
             </p>
           </div>
         </ScrollFadeIn>

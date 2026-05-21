@@ -18,12 +18,10 @@ export default function HeroSection() {
             People Leader · AI-Native · Builder
           </p>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1C1917] leading-tight mb-6">
-            Strong organisations are built through thoughtfully designed
-            environments.
+            What looks like a people problem is almost always a design problem.
           </h1>
           <p className="text-lg text-[#78716C] leading-relaxed mb-10 max-w-lg">
-            I&apos;m Pooja Lathkar — a people leader who builds the systems,
-            teams and cultures that make that possible.
+            I&apos;m Pooja Lathkar. I&apos;ve spent 15 years redesigning environments to prove it.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
